@@ -60,7 +60,7 @@ include("functions/functions.php");
 
 <div class="content_wrapper">
 
-   <div id="sidebar">
+   <div id="sidebar"> 
    
     <div id="sidebar_title">
 	Categories</div>
@@ -88,6 +88,7 @@ include("functions/functions.php");
    <div id="shopping_cart">
    
         <span style="float:right; font-size:16px; padding:5px;line-height:40px;">
+		 
 		 <?php
 		 //display customer email if logged in else display we 'come guest
 		 if(isset($_SESSION['customer_email']))
@@ -95,30 +96,9 @@ include("functions/functions.php");
 		 
 		 {echo "<b> Welcome:</b>" .$_SESSION['customer_email'] . "<b style='color:yellow;'> Your</b>" ; }
 		 
-		 else{echo "<b> Welcome Guest!</b>";}                                    ?>
-		 
-		 
+		 else{echo "<b> Welcome Guest!</b>";}                                    ?><b style="color:yellow">Shopping Cart -</b>Total Items:<?php total_item();?>  Total Price:<?php total_price();?> <a href="cart.php"
+		style="color:yellow">Go to Cart </a>
 		
-		
-		
-		<b style="color:yellow">Shopping Cart -</b>Total Items:<?php total_item();?>  Total Price:<?php total_price();?> <a href="cart.php"
-		style="color:yellow">Go to Cart  </a>
-		
-		<?php
-		  if(!isset($_SESSION['customer_email'])){
-			  
-			echo " <a href='checkout.php' style='color:orange;'> Login</a>"  ;
-			  
-			  
-		  }else{
-			  
-			  echo "<a href='logout.php' style='color:orange;'> Logout</a>";
-		  }
-		
-		
-		
-		
-		?>
 		
 		</span>
    
@@ -131,12 +111,22 @@ include("functions/functions.php");
    
    
      <div id="products_box">
-	<!--NOTE any of this functions will display on the content_area  if call for bcos its not echo instantly--> 
-	 <?php getpro();   ?>                                                       
-	 <?php getcatpro();   ?>                                                    
-	  <?php getbrandpro();   ?>                                                   
-	
-	  
+	 
+               <?php
+
+	 if(!isset($_SESSION['customer_email'])){
+			  
+			include("customer_login.php");
+			  
+			  
+		  }else{
+			  
+			  include("payment.php");
+		  }
+			  
+			 
+
+?>	
 	 
 	 </div>
    
