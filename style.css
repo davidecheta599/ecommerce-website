@@ -27,135 +27,56 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 display: block;}
 
-
 body{background:skyblue;}
 
-
- .main_wrapper{
+.main_wrapper{
 	width:1000px;
 	height:auto;
 	margin:auto;
-	background:pink;
-	
 }
-.header_wrapper{
-	background-image:url(../images/header.jpg);
-	height:80px;
-	border-bottom:0px;
-	padding-left:auto;
-	padding-right:auto;
-	width:100%;
-	margin:auto;
+#header{
+	
+	width:1000px;
+	height:150px;
+	background-image:url('../images/admin3.jpg');/*../image '  cos the style.css is not in the same directory with the folder */
+	border-bottom:5px groove orange;
+}
+
+#left{
+	
+	width:795px;
+	height:800px;
+/*   background-image:url('../images/admin4.jpg');  */
+	float:left;
 	background:white;
 }
-#logo img{
-	height:80px;
-    float:left;
-	}
-	
-	
-.menubar{
-	width:1000px;
-	height:50px;
-	background:gray;
-	color:white;
+
+
+#right{	
+	width:200px;
+	height:800px;
+	/*   background-image:url('../images/admin4.jpg');  */
+	float:right;
+	border-left:5px groove orange;
+	background:white;
 }
-#menu{
-	padding:0;
-	margin:0;
-	line-height:35px;/*since the menubar has a height of 50px*/
-	float:left;
-}
-#menu li{
-	list-style:none;
-	display:inline;
-}	
-#menu a{
+
+#right a{
+	
 	text-decoration:none;
-	color:white;
-	padding:8px;
-	margin:5px;
+	text-align:left;
 	font-size:18px;
-	font-family:COMIC SANS MS;
+	font-family:palatino;
+	padding:6px;
+	margin:6px;
+	display:block;
+	
 }
-	#menu a:HOVER{
+	#right a:HOVER{
 	font-weight:bolder;
 	color:orange;text-decoration:underline;
 }
-#form{
-	float:right;padding-right:8px;line-height:50px;/*perfect form centered '''since the menubar has a height of 50px*/
-}
-.content_wrapper{
-	width:1000px;
-	/*height:800px; we romove the helght cos is better to make it auto*/
-	margin:auto;
-	background:pink;
-}
-#content_area{
-	width:800px;
-	/*height:800px; we romove the helght cos is better to make it auto*/
-	float:left;
-	background:pink;
-}
-#sidebar{
-	width:200px;
-/*height:800px; we romove the helght cos is better to make it auto*/
-	float:right;
-	background:black;}
-	
-	#sidebar_title{
-		background:white;
-		color:black;
-		font-size:22px;
-		font-family:arial;
-		padding:10px;
-		text-align:center;
-	}
-	
-	#cats{
-		text-align:left;
-	}
-	#cats li{list-style:none;margin:5px;
-	}
-	
-	#cats a{
-    color:orange;
-	padding:8px; 
-	margin:5px;
-	text-align:left;
-	text-decoration:none;
-	font-size:17px;
-	font-family:comic san ms;
-	}
-	#cats a:HOVER{
-	font-weight:bolder;
-	color:white;text-decoration:underline;}
-	#cats img{border:2px solid white;padding:4px;}
-	
-	
-	#products_box{
-	width:780px;
-    text-align:center;
-margin-left:30px;
-margin-bottom:10px;	
-		
-	}
-	#single_product{
-		float:left;
-		margin-left:30px;
-		padding:10px;
-		
-	}
-	#single_product img{border:2px solid black;}
-	#shopping_cart{width:800px;height:50px; background:black;color:white;}
-	
-#footer{
-	width:1000px;
-	height:100px;
-	background:gray;
-	clear:both;
-	text-align:center;
-	}
+#insert td {padding:5px;}
 
 
 
